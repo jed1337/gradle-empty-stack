@@ -4,12 +4,17 @@ import mobiles.Mobile;
 
 public class Person {
     private String name;
+    private Mobile mobile;
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void makeCall(Mobile mobile, String message){
+    public void setMobile(Mobile mobile) {
+        this.mobile = mobile;
+    }
+
+    public void makeCall(String message){
         mobile.call(message);
     }
 }

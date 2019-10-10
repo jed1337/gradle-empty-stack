@@ -23,20 +23,29 @@ public class App {
         plainMobile.printInformation();
 
         System.out.println();
+        System.out.println("Person make call length invalid");
 
         Person person = new Person();
         person.setName("Bob");
-        person.makeCall(plainMobile, twentyCharacters);
-        person.makeCall(iPhone, twentyCharacters);
-        person.makeCall(android, twentyCharacters);
+        person.setMobile(plainMobile);
+        person.makeCall(twentyCharacters);
+        person.setMobile(iPhone);
+        person.makeCall(twentyCharacters);
+        person.setMobile(android);
+        person.makeCall(twentyCharacters);
 
         System.out.println();
+        System.out.println("Person make call length sometimes valid");
 
-        person.makeCall(plainMobile, tenCharacters);
-        person.makeCall(iPhone, tenCharacters);
-        person.makeCall(android, tenCharacters);
+        person.setMobile(plainMobile);
+        person.makeCall(tenCharacters);
+        person.setMobile(iPhone);
+        person.makeCall(tenCharacters);
+        person.setMobile(android);
+        person.makeCall(tenCharacters);
 
         System.out.println();
+        System.out.println("Robot make call");
         IPhoneRobot iPhoneRobot = new IPhoneRobot();
         iPhoneRobot.makeCall(iPhone, tenCharacters);
     }
