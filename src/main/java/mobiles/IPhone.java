@@ -5,4 +5,9 @@ public class IPhone extends Mobile {
     protected String messenger() {
         return "<iPhone>Message";
     }
+
+    @Override
+    protected int messageLengthLimit() {
+        return 10;
+    }
 }
