@@ -9,7 +9,7 @@ public class Mobile {
         System.out.println(messenger()+" : " + message);
     }
 
-    public String messenger(){
+    protected String messenger(){
         return "Message";
     }
 }
